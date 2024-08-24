@@ -54,7 +54,6 @@ class PokemonController extends AbstractController
                 ];
             }
 
-            // Retornar JSON com os dados dos Pokémons
             return $this->response->json($pokemons);
         } catch (\Throwable $e) {
             return $this->response->json(['error' => $e->getMessage()], 500);

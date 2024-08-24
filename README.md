@@ -69,4 +69,7 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 Felipe Jose - felipe.jsilva290196@gmail.com
 
-Link do Projeto: [https://github.com/felipe29j/api-pokemon.git](https://github.com/felipe29j/api-pokemon.git )
+Link do Projeto: [https://github.com/felipe29j/api-pokemon.git](https://github.com/felipe29j/api-pokemon.git)
+
+Link do Video: [https://drive.google.com/file/d/1C69E3v0_l9ZZyKuPXCtNrGwYhD0hkVrV/view](https://drive.google.com/file/d/1C69E3v0_l9ZZyKuPXCtNrGwYhD0hkVrV/view)
+

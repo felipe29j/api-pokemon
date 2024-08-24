@@ -16,7 +16,6 @@ async function fetchPokemons() {
             pokemonElement.innerHTML = `
                 <h2>${pokemon.name}</h2>
                 <img src="${pokemon.image}" alt="${pokemon.name}">
-                <p>Moves:</p>
                 <ul>
                     ${pokemon.moves.map(move => `<li>${move}</li>`).join('')}
                 </ul>
@@ -28,3 +27,7 @@ async function fetchPokemons() {
         console.error('Erro ao buscar Pokémons:', error);
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('button').addEventListener('click', fetchPokemons);
+});
