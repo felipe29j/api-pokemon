@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.logo {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    margin-top: 20px;
+}
+button {
+    background-color: #007bff; /* Azul */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro para o hover */
+}
+#pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.pokemon {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+.pokemon:hover {
+    transform: scale(1.05);
+}
+.pokemon img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.pokemon h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.pokemon p {
+    color: #666;
+    font-size: 14px;
+}
+.pokemon ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #333;
+    font-size: 14px;
+}
+.pokemon li {
+    margin-bottom: 5px;
+}
