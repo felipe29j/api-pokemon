@@ -1,63 +1,72 @@
-# Introduction
+# Pokémon Card Generator
 
-This is a skeleton application using the Hyperf framework. This application is meant to be used as a starting place for those looking to get their feet wet with Hyperf Framework.
+Um protótipo para gerar informações sobre Pokémons usando a PokeAPI. Este projeto permite a visualização de 5 Pokémons aleatórios com seus nomes, imagens e movimentos. O projeto foi desenvolvido usando o framework Hyperf para PHP.
 
-# Requirements
+## Estrutura do Projeto
 
-Hyperf has some requirements for the system environment, it can only run under Linux and Mac environment, but due to the development of Docker virtualization technology, Docker for Windows can also be used as the running environment under Windows.
+- **Backend**: Utiliza o Hyperf para criar uma API que busca dados dos Pokémons e os retorna em formato JSON.
+- **Frontend**: Utiliza HTML, CSS e JavaScript para exibir os dados dos Pokémons de forma interativa e estilizada.
 
-The various versions of Dockerfile have been prepared for you in the [hyperf/hyperf-docker](https://github.com/hyperf/hyperf-docker) project, or directly based on the already built [hyperf/hyperf](https://hub.docker.com/r/hyperf/hyperf) Image to run.
+## Funcionalidades
 
-When you don't want to use Docker as the basis for your running environment, you need to make sure that your operating environment meets the following requirements:  
+- Gera 5 Pokémons aleatórios ao clicar no botão.
+- Exibe o nome, a imagem e até 4 movimentos de cada Pokémon.
+- A interface é simples e intuitiva, com um botão para gerar os Pokémons e uma área para exibi-los.
 
- - PHP >= 8.1
- - Any of the following network engines
-   - Swoole PHP extension >= 5.0，with `swoole.use_shortname` set to `Off` in your `php.ini`
-   - Swow PHP extension >= 1.3
- - JSON PHP extension
- - Pcntl PHP extension
- - OpenSSL PHP extension （If you need to use the HTTPS）
- - PDO PHP extension （If you need to use the MySQL Client）
- - Redis PHP extension （If you need to use the Redis Client）
- - Protobuf PHP extension （If you need to use the gRPC Server or Client）
+## Pré-requisitos
 
-# Installation using Composer
+- PHP 8.0 ou superior
+- Composer
+- Node.js (para a construção de assets, se necessário)
 
-The easiest way to create a new Hyperf project is to use [Composer](https://getcomposer.org/). If you don't have it already installed, then please install as per [the documentation](https://getcomposer.org/download/).
+## Instalação
 
-To create your new Hyperf project:
+1. **Clone o repositório**:
 
-```bash
-composer create-project hyperf/hyperf-skeleton path/to/install
-```
+    ```bash
+    git clone https://github.com/felipe29j/api-pokemon.git 
+    ou
+    git clone git@github.com:felipe29j/api-pokemon.git 
 
-If your development environment is based on Docker you can use the official Composer image to create a new Hyperf project:
+    Entre na pasta para os proximos comandos
 
-```bash
-docker run --rm -it -v $(pwd):/app composer create-project --ignore-platform-reqs hyperf/hyperf-skeleton path/to/install
-```
+    cd api-pokemon
+    ```
 
-# Getting started
+2. **Instale as dependências do PHP**:
 
-Once installed, you can run the server immediately using the command below.
+    ```bash
+    composer install
+    ```
 
-```bash
-cd path/to/install
-php bin/hyperf.php start
-```
+3. **Configure o ambiente**:
 
-Or if in a Docker based environment you can use the `docker-compose.yml` provided by the template:
+   Crie um arquivo `.env` a partir do `.env.example` e ajuste as configurações conforme necessário.
 
-```bash
-cd path/to/install
-docker-compose up
-```
+4. **Inicie o servidor**:
 
-This will start the cli-server on port `9501`, and bind it to all network interfaces. You can then visit the site at `http://localhost:9501/` which will bring up Hyperf default home page.
+    ```bash
+    php bin/hyperf.php start
+    ```
 
-## Hints
+## Uso
 
-- A nice tip is to rename `hyperf-skeleton` of files like `composer.json` and `docker-compose.yml` to your actual project name.
-- Take a look at `config/routes.php` and `app/Controller/IndexController.php` to see an example of a HTTP entrypoint.
+1. Acesse a página principal do seu aplicativo no navegador: [http://localhost:9501](http://localhost:9501)
+2. Clique no botão "Gerar Pokémons" para obter uma lista de 5 Pokémons aleatórios.
 
-**Remember:** you can always replace the contents of this README.md file to something that fits your project description.
+## Estrutura dos Arquivos
+
+- **`app/Controller/PokemonController.php`**: Controlador responsável por buscar dados dos Pokémons e renderizar a view.
+- **`resources/views/pokemons.blade.php`**: Template Blade para exibir os dados dos Pokémons.
+- **`public/css/style.css`**: Estilos CSS para a página.
+- **`public/js/scripts.js`**: Scripts JavaScript para interatividade.
+
+## Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+
+## Contato
+
+Felipe Jose - felipe.jsilva290196@gmail.com
+
+Link do Projeto: [https://github.com/felipe29j/api-pokemon.git](https://github.com/felipe29j/api-pokemon.git )
